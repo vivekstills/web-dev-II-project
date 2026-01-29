@@ -1,0 +1,66 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa | My Cute Money Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for that soft, cute look -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Sewa <span>✨</span></h1>
+            <p>Tracking my coins, one step at a time.</p>
+        </header>
+
+        <!-- Balance Section -->
+        <section class="balance-card">
+            <div class="main-balance">
+                <h3>Total Balance</h3>
+                <h2 id="total-balance">$0.00</h2>
+            </div>
+            <div class="stats-row">
+                <div class="stat-item income">
+                    <span>Income</span>
+                    <p id="total-income">$0.00</p>
+                </div>
+                <div class="stat-item expense">
+                    <span>Expenses</span>
+                    <p id="total-expense">$0.00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Input Section -->
+        <section class="input-section">
+            <form id="money-form">
+                <div class="form-group">
+                    <input type="text" id="description" placeholder="What was it for? (e.g. Boba tea)" required>
+                </div>
+                <div class="form-group row">
+                    <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+                    <select id="type">
+                        <option value="income">Income</option>
+                        <option value="expense" selected>Expense</option>
+                    </select>
+                </div>
+                <button type="submit" id="add-btn">Add Transaction</button>
+            </form>
+        </section>
+
+        <!-- List Section -->
+        <section class="history-section">
+            <h3>Recent History</h3>
+            <ul id="transaction-list">
+                <!-- Transactions will be injected here by JS -->
+                <li class="empty-msg">No transactions yet. Start saving!</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
